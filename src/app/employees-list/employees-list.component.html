@@ -1,0 +1,12 @@
+  <h1>רשימת עובדים</h1>
+  <span class="list-group" *ngFor='let employee of employee'>
+        <a href="#" class= "list-group-item list-group-item-action" (click)="onSelect(employee)"> 
+          {{employee.name}} 
+        </a>
+
+      </span>
+
+  <app-employee-details [employee]=selectedEmployee></app-employee-details>
+
+<button (click)="addEmployee()">הוסף עובד</button>
+  

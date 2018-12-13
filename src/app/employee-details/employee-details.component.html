@@ -1,0 +1,11 @@
+<div *ngIf="employee">
+<h1>פרטים נוספים</h1>
+<div class="list-group">
+    <a class="list-group-item"><label>גיל</label>: {{employee.age}}</a>
+    <a class="list-group-item"><label>מין</label>: {{employee.sex}}</a>
+</div>
+<h1>ילדים</h1>
+<div *ngFor='let kids of employee.kids'>
+    <a class="list-group-item"> {{kids.name}}  <label>:שם </label></a>
+    <a class="list-group-item"> {{kids.age}}  <label>:גיל </label></a>
+</div>

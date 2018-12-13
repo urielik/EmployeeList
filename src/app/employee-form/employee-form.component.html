@@ -1,0 +1,26 @@
+<div class="container"> 
+    <h1>הוספת עובד</h1>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label for="form">שם</label>
+        <input type="text" class="form-control" id="name"  [(ngModel)]="data.name" required>
+      </div>
+ 
+      <div class="form-group">
+        <label for="form">גיל</label>
+        <input type="number" class="form-control" id="age"  [(ngModel)]="data.age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="form">מין</label>
+        <select class="form-control" >
+        <option *ngFor="let sex of sex"
+                [value]="sex"> 
+                {{sex}} 
+        </option>
+        </select>
+
+      </div>
+      <button type="submit" class="btn btn-success" >Submit</button>
+    </form>
+</div>
