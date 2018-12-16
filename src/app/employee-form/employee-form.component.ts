@@ -15,7 +15,10 @@ export class EmployeeFormComponent implements OnInit {
     'נקבה',
   ]
 
-  data: employee;
+  //data: employee;
+  name: string;
+  age: number;
+  gender: string;
 
   constructor() { }
 
@@ -23,6 +26,6 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   onSubmit(form:NgForm ) { 
-    alert("Hello "  + JSON.stringify(form.value));
+    alert();
   }
 }
