@@ -1,26 +1,28 @@
-<div class="container"> 
+div class="container"> 
     <h1>הוספת עובד</h1>
-    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <form  (ngSubmit)="onSubmit()">
+
       <div class="form-group">
         <label for="form">שם</label>
-        <input type="text" class="form-control" id="name"  [(ngModel)]="name" ngModelOptions]="{standalone: true}" required>
+        <input type="text" class="form-control" id="name"  [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required>
       </div>
  
       <div class="form-group">
         <label for="form">גיל</label>
-        <input type="number" class="form-control" id="age"  [(ngModel)]="age" ngModelOptions]="{standalone: true}" required>
+        <input type="number" class="form-control" id="age"   [(ngModel)]="age" [ngModelOptions]="{standalone: true}" required>
       </div>
 
       <div class="form-group">
         <label for="form">מין</label>
-        <select class="form-control" [(ngModel)]="age" ngModelOptions]="{standalone: true}">
-        <option *ngFor="let sex of sex"
-                [value]="sex"> 
-                {{sex}} 
+        <select class="form-control"   [(ngModel)]="gender" [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let gender of sex"
+                [value]="gender"> 
+                {{gender}} 
         </option>
         </select>
-
       </div>
+
       <button type="submit" class="btn btn-success" >Submit</button>
     </form>
 </div>
+
